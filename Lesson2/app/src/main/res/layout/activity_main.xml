@@ -17,6 +17,6 @@
                 android:layout_height="match_parent"
                 app:srcCompat="@android:drawable/star_big_on" />
         </LinearLayout>
-    
+
     </ScrollView>
 
