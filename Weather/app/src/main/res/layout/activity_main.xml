@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#73CED3"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -26,7 +27,7 @@
                 android:id="@+id/Logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="World Weather"
+                android:text="@string/worldweather"
                 android:textSize="24sp" />
 
             <ImageView
@@ -56,15 +57,20 @@
                 android:id="@+id/Date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:text="@string/currentDate"
+                android:textAlignment="center" />
 
             <EditText
                 android:id="@+id/Time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="time" />
+                android:inputType="time"
+                android:text="@string/currentTime"
+                android:textAlignment="center" />
 
         </LinearLayout>
 
@@ -76,10 +82,10 @@
             <ImageView
                 android:id="@+id/sky"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
+                android:layout_height="266dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/clouds_sun" />
+                app:srcCompat="@drawable/cloudysun" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +107,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="240sp"
             android:layout_marginLeft="20sp"
             android:layout_marginTop="50sp"
             android:orientation="horizontal">
@@ -119,9 +125,9 @@
 
                 <ImageView
                     android:id="@+id/sky_today"
-                    android:layout_width="67dp"
-                    android:layout_height="58dp"
-                    app:srcCompat="@drawable/clouds_sun" />
+                    android:layout_width="67sp"
+                    android:layout_height="56sp"
+                    app:srcCompat="@drawable/cloudysunsmall" />
 
                 <TextView
                     android:id="@+id/today"
@@ -132,6 +138,16 @@
             </TableRow>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/btnset"
+            android:layout_width="131dp"
+            android:layout_height="100sp"
+            android:layout_weight="1"
+            android:gravity="bottom|right"
+            android:text="@string/settings"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat" />
 
     </LinearLayout>
 

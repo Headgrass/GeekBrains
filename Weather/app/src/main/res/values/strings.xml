@@ -1,7 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Погода</string>
     <string name="calendar">СР 15.04</string>
     <string name="weather">Солнечно, без ветра, +10 С</string>
     <string name="head_weather">Тепло и солнечно, +10 C</string>
     <string name="city">Новосибирск</string>
+    <string name="worldweather">WorldWeather</string>
+    <string name="defCity">Москва</string>
+    <string name="enter">Принять</string>
+    <string name="changeCity">Выберите город</string>
+    <string name="dopOpt">Дополнительные опции</string>
+    <string name="speedWind">Скорость ветра</string>
+    <string name="press">Давление</string>
+    <string name="lang">Переключить на английский</string>
+    <string name="currentTime">14:27</string>
+    <string name="currentDate">14.04.2020</string>
+    <string name="settings">Настройки</string>
 </resources>
