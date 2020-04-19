@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#73CED3">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="Настройки"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="158dp" />
+
+    <EditText
+        android:id="@+id/changeCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:editable="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:text="Москва"
+        android:textColor="#283593"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <Button
+        android:id="@+id/btnCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Принять"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="477dp" />
+
+    <TextView
+        android:id="@+id/nameCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выберите город"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/ExtOpt"
+        android:layout_width="289dp"
+        android:layout_height="22dp"
+        android:text="Дополнительные опции"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/nameCity"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <CheckBox
+        android:id="@+id/spWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Скорость ветра"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/changeCity"
+        tools:layout_editor_absoluteY="263dp" />
+
+    <CheckBox
+        android:id="@+id/press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Давление"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/spWind"
+        tools:layout_editor_absoluteY="313dp" />
+
+    <Switch
+        android:id="@+id/lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Переключить на английский  "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/changeCity"
+        tools:layout_editor_absoluteY="399dp" />
+
+</android.support.constraint.ConstraintLayout>
