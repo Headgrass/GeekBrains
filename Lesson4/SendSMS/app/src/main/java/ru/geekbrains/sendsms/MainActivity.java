@@ -3,6 +3,7 @@ package ru.geekbrains.sendsms;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
                 Intent smsSend = new Intent(Intent.ACTION_SEND);
                 smsSend.setData(Uri.parse("smsto:"));
                 smsSend.putExtra("smsBody", smsBody);
-                startActivity(smsSend);
+                ActivityInfo activityInfo = smsSend.resolveActivityInfo(getPackageManager(), smsSend.getFlags());
+                if(activityInfo != null){
+                    startActivity(smsSend);
+                }
             }
         });
     }
