@@ -14,7 +14,7 @@ public class SecondActivity extends AppCompatActivity implements Constants{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Parcel parcel = (Parcel) getIntent().getSerializableExtra(TEXT);
+        Parcel parcel = (Parcel) getIntent().getSerializableExtra(PARCEL);
         TextView textView = findViewById(R.id.textView2);
         textView.setText(parcel.id);
         TextView nameView = findViewById(R.id.textView3);
@@ -24,6 +24,9 @@ public class SecondActivity extends AppCompatActivity implements Constants{
         mainAct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intentResult = new Intent();
+                intentResult.putExtra(NAME, "Hello");
+                setResult(RESULT_OK, intentResult);
                 finish();
             }
         });
