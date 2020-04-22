@@ -1,15 +1,19 @@
 package ru.GeekBrains.weather;
 //Продолжаю работать
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.Objects;
+
+public class MainActivity extends AppCompatActivity implements Constants{
     private static final String LIFECYCLE = "LIFE_CYCLE";
 
     @Override
@@ -17,10 +21,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Parcel parcel = (Parcel) getIntent().getSerializableExtra(TEXT);
+        TextView currCity = findViewById(R.id.city);
+        currCity.setText(parcel.city);
 
-       // Button btnCity = findViewById(R.id.btnCity);
 
-       // btnCity.setOnClickListener(changeCity);
+        Button settings = findViewById(R.id.btnset);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Activitytwo.class);
+                startActivity(intent);
+            }
+        });
 
         if (savedInstanceState == null) {
             makeToast("Первый запуск!");
@@ -70,17 +83,12 @@ public class MainActivity extends AppCompatActivity {
         makeToast("Повторный запуск onRestoreInstanceState");
     }
 
-    private  View.OnClickListener changeCity = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent = new Intent(MainActivity.this, Activitytwo.class);
-            startActivity();
-        }
+    @Override
+    protected void onSaveInstanceState(Bundle savedInstanceState){
+        super.onSaveInstanceState(savedInstanceState);
+        makeToast("Запись в onSaveInstanceState");
+    }
 
-        private void startActivity() {
-            setContentView(R.layout.settings);
-        }
-    };
     public void makeToast(String message){
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
         Log.d(LIFECYCLE, message);

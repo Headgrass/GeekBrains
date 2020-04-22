@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#73CED3">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="131dp"
+        android:gravity="center_horizontal"
+        android:text="@string/settings"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/changeCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:autofillHints=""
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="true"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:text="@string/defCity"
+        android:textColor="#283593"
+        app:layout_constraintBottom_toTopOf="@+id/ExtOpt"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="206dp"
+        android:text="@string/enter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lang"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/nameCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/changeCity"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ExtOpt"
+        app:layout_constraintEnd_toStartOf="@+id/changeCity"
+        app:layout_constraintHorizontal_bias="0.62"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/ExtOpt"
+        android:layout_width="289dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="164dp"
+        android:text="@string/dopOpt"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/spWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/speedWind"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/press"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.581"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExtOpt"
+        app:layout_constraintVertical_bias="0.084"
+        tools:ignore="MissingConstraints" />
+
+    <CheckBox
+        android:id="@+id/press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/press"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/spWind"
+        app:layout_constraintTop_toBottomOf="@+id/ExtOpt"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginBottom="324dp"
+        android:text="@string/lang"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/changeCity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>
