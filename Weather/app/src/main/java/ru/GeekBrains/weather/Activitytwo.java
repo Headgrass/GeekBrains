@@ -8,13 +8,13 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Activitytwo extends AppCompatActivity implements Constants{
-    EditText changeCity1 = findViewById(R.id.changeCity);
+    private EditText changeCity1 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
-
+        changeCity1 = findViewById(R.id.changeCity);
 
 
         Button backtoMain = findViewById(R.id.btnCity);
