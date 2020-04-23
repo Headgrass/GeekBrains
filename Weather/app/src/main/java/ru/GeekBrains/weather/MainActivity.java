@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements Constants{
         setContentView(R.layout.activity_main);
 
         Parcel parcel = (Parcel) getIntent().getSerializableExtra(TEXT);
+        if (parcel == null){
+            parcel = new Parcel();
+        }
         TextView currCity = findViewById(R.id.city);
         currCity.setText(parcel.city);
 
