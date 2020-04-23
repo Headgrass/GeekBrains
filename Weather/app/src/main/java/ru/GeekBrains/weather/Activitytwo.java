@@ -21,15 +21,16 @@ public class Activitytwo extends AppCompatActivity implements Constants{
         backtoMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent();
                 intent.putExtra(TEXT, createParcel());
+                setResult(RESULT_OK, intent);
                 finish();
             }
         });
     }
     private Parcel createParcel(){
         Parcel parcel = new Parcel();
-        parcel.city = changeCity1.toString();
+        parcel.city = changeCity1.getText().toString();
         return parcel;
     }
 }
