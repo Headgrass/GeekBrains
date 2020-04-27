@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -136,20 +137,27 @@
                     android:text="@string/weather"
                     android:textSize="18sp" />
             </TableRow>
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnset"
-            android:layout_width="131dp"
-            android:layout_height="100sp"
-            android:layout_weight="1"
-            android:gravity="bottom|right"
-            android:text="@string/settings"
-            android:textAlignment="center"
-            android:textSize="14sp"
-            tools:ignore="RtlCompat" />
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnset"
+        android:layout_width="131dp"
+        android:layout_height="100sp"
+        android:layout_weight="1"
+        android:gravity="bottom|right"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="RtlCompat" />
 </android.support.constraint.ConstraintLayout>
